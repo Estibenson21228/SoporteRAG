@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36811.4 d17.14
+VisualStudioVersion = 17.14.36811.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
@@ -12,6 +12,38 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoporteRAG.Domain", "SoporteRAG.Domain\SoporteRAG.Domain.csproj", "{6C368FF0-02CE-4BE9-9024-8CC271EF100A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoporteRAG.Infrastructure", "SoporteRAG.Infrastructure\SoporteRAG.Infrastructure.csproj", "{3A14C70C-7742-4EB5-A059-42AAF4E1C003}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{D107F4C8-89CC-BEA8-D3D7-CA6B7733353D}"
+	ProjectSection(SolutionItems) = preProject
+		EntregaFinal.md = EntregaFinal.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "imagenes", "imagenes", "{C273215C-AB22-4378-8F9C-143C21435D36}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\Asignaturas\01-2026\045-Inteligencia Artificial\Segundo parcial\PrimerProyecto\Arquitectura.png = ..\..\Asignaturas\01-2026\045-Inteligencia Artificial\Segundo parcial\PrimerProyecto\Arquitectura.png
+		..\..\Asignaturas\01-2026\045-Inteligencia Artificial\Segundo parcial\PrimerProyecto\Ask.png = ..\..\Asignaturas\01-2026\045-Inteligencia Artificial\Segundo parcial\PrimerProyecto\Ask.png
+		..\..\Asignaturas\01-2026\045-Inteligencia Artificial\Segundo parcial\PrimerProyecto\Ask2.png = ..\..\Asignaturas\01-2026\045-Inteligencia Artificial\Segundo parcial\PrimerProyecto\Ask2.png
+		..\..\Asignaturas\01-2026\045-Inteligencia Artificial\Segundo parcial\PrimerProyecto\Ask3.png = ..\..\Asignaturas\01-2026\045-Inteligencia Artificial\Segundo parcial\PrimerProyecto\Ask3.png
+		..\..\Asignaturas\01-2026\045-Inteligencia Artificial\Segundo parcial\PrimerProyecto\Ask4.png = ..\..\Asignaturas\01-2026\045-Inteligencia Artificial\Segundo parcial\PrimerProyecto\Ask4.png
+		..\..\Asignaturas\01-2026\045-Inteligencia Artificial\Segundo parcial\PrimerProyecto\Ask5.png = ..\..\Asignaturas\01-2026\045-Inteligencia Artificial\Segundo parcial\PrimerProyecto\Ask5.png
+		..\..\Asignaturas\01-2026\045-Inteligencia Artificial\Segundo parcial\PrimerProyecto\Ask6.png = ..\..\Asignaturas\01-2026\045-Inteligencia Artificial\Segundo parcial\PrimerProyecto\Ask6.png
+		..\..\Asignaturas\01-2026\045-Inteligencia Artificial\Segundo parcial\PrimerProyecto\Ask7.png = ..\..\Asignaturas\01-2026\045-Inteligencia Artificial\Segundo parcial\PrimerProyecto\Ask7.png
+		..\..\Asignaturas\01-2026\045-Inteligencia Artificial\Segundo parcial\PrimerProyecto\Ask8.png = ..\..\Asignaturas\01-2026\045-Inteligencia Artificial\Segundo parcial\PrimerProyecto\Ask8.png
+		..\..\Asignaturas\01-2026\045-Inteligencia Artificial\Segundo parcial\PrimerProyecto\chunk.png = ..\..\Asignaturas\01-2026\045-Inteligencia Artificial\Segundo parcial\PrimerProyecto\chunk.png
+		..\..\Asignaturas\01-2026\045-Inteligencia Artificial\Segundo parcial\PrimerProyecto\Embedding.png = ..\..\Asignaturas\01-2026\045-Inteligencia Artificial\Segundo parcial\PrimerProyecto\Embedding.png
+		..\..\Asignaturas\01-2026\045-Inteligencia Artificial\Segundo parcial\PrimerProyecto\Endpoint.png = ..\..\Asignaturas\01-2026\045-Inteligencia Artificial\Segundo parcial\PrimerProyecto\Endpoint.png
+		..\..\Asignaturas\01-2026\045-Inteligencia Artificial\Segundo parcial\PrimerProyecto\GoldenSet.png = ..\..\Asignaturas\01-2026\045-Inteligencia Artificial\Segundo parcial\PrimerProyecto\GoldenSet.png
+		..\..\Asignaturas\01-2026\045-Inteligencia Artificial\Segundo parcial\PrimerProyecto\GoldenSet2.png = ..\..\Asignaturas\01-2026\045-Inteligencia Artificial\Segundo parcial\PrimerProyecto\GoldenSet2.png
+		..\..\Asignaturas\01-2026\045-Inteligencia Artificial\Segundo parcial\PrimerProyecto\GoldenSet3.png = ..\..\Asignaturas\01-2026\045-Inteligencia Artificial\Segundo parcial\PrimerProyecto\GoldenSet3.png
+		..\..\Asignaturas\01-2026\045-Inteligencia Artificial\Segundo parcial\PrimerProyecto\ImportDoc.png = ..\..\Asignaturas\01-2026\045-Inteligencia Artificial\Segundo parcial\PrimerProyecto\ImportDoc.png
+		..\..\Asignaturas\01-2026\045-Inteligencia Artificial\Segundo parcial\PrimerProyecto\ImportDoc2.png = ..\..\Asignaturas\01-2026\045-Inteligencia Artificial\Segundo parcial\PrimerProyecto\ImportDoc2.png
+		..\..\Asignaturas\01-2026\045-Inteligencia Artificial\Segundo parcial\PrimerProyecto\ImportTicket.png = ..\..\Asignaturas\01-2026\045-Inteligencia Artificial\Segundo parcial\PrimerProyecto\ImportTicket.png
+		..\..\Asignaturas\01-2026\045-Inteligencia Artificial\Segundo parcial\PrimerProyecto\ImportTicket2.png = ..\..\Asignaturas\01-2026\045-Inteligencia Artificial\Segundo parcial\PrimerProyecto\ImportTicket2.png
+		..\..\Asignaturas\01-2026\045-Inteligencia Artificial\Segundo parcial\PrimerProyecto\ImportTicket3.png = ..\..\Asignaturas\01-2026\045-Inteligencia Artificial\Segundo parcial\PrimerProyecto\ImportTicket3.png
+		..\..\Asignaturas\01-2026\045-Inteligencia Artificial\Segundo parcial\PrimerProyecto\ImportTicket4.png = ..\..\Asignaturas\01-2026\045-Inteligencia Artificial\Segundo parcial\PrimerProyecto\ImportTicket4.png
+		..\..\Asignaturas\01-2026\045-Inteligencia Artificial\Segundo parcial\PrimerProyecto\Interfaz.png = ..\..\Asignaturas\01-2026\045-Inteligencia Artificial\Segundo parcial\PrimerProyecto\Interfaz.png
+		..\..\Asignaturas\01-2026\045-Inteligencia Artificial\Segundo parcial\PrimerProyecto\ticket.png = ..\..\Asignaturas\01-2026\045-Inteligencia Artificial\Segundo parcial\PrimerProyecto\ticket.png
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,6 +76,7 @@ Global
 		{C0E502E3-2A9C-4D60-9121-AE4FEE22C814} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{6C368FF0-02CE-4BE9-9024-8CC271EF100A} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{3A14C70C-7742-4EB5-A059-42AAF4E1C003} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{C273215C-AB22-4378-8F9C-143C21435D36} = {D107F4C8-89CC-BEA8-D3D7-CA6B7733353D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {42010DE4-BEEC-481B-BC90-B23FD365D054}
