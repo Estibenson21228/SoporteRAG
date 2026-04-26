@@ -45,7 +45,7 @@ El sistema fue desarrollado utilizando:
 ## Arquitectura
 
 <p align="center">
-  <img src="docs/imgs/arquitectura.png" width="600"/>
+  <img src="docs/imgs/Arquitectura.png" width="600"/>
 </p>
 
  Flujo RAG
@@ -63,12 +63,12 @@ El sistema fue desarrollado utilizando:
 •	Tickets convertidos a texto
 •	Documentos divididos en chunks
  
- ![Tickets](imagenes/ticket.png)
+ ![Tickets](imgs/ticket.png)
  Chunking
 Se evaluaron dos configuraciones:
 •	300 caracteres
 •	600 caracteres
- ![Chunking](imagenes/chunk.png)
+ ![Chunking](imgs/chunk.png)
  Embeddings
 Se utilizó OpenAI para generar vectores de texto, almacenados como JSON en SQL Server.
 
@@ -79,7 +79,7 @@ Incluyendo:
 •	TipoRecurso (Ticket / Documento)
 •	TextoOriginal
 •	Vector
-  ![Embedding](imagenes/Embedding.png)
+  ![Embedding](imgs/Embedding.png)
 6.  Interfaz
 Se implementó una API REST con endpoints:
 •	/api/rag/preguntar → consulta RAG
@@ -87,28 +87,30 @@ Se implementó una API REST con endpoints:
 •	/api/ticket/import/csv → subir csv de ticket
 •	/api/tickets → subir tickets de forma manual
 •	/api/evaluation/experiments → evaluar métricas
-![Endpoint](imagenes/Endpoint.png) 
+![Endpoint](imgs/Endpoint.png) 
 
 Se implementó una interfaz básica con HTML, CSS y JS:
 
-![Interfaz](imagenes/Interfaz.png)
+![Interfaz](imgs/Interfaz.png)
  
 Carga de datos desde csv con estructura de ticket definida en la base de datos:
  
- ![ImportTicket](imagenes/ImportTicket.png)
- ![ImportTicket2](imagenes/ImportTicket2.png)
- ![ImportTicket3](imagenes/ImportTicket3.png)
- ![ImportTicket4](imagenes/ImportTicket4.png)
+ ![ImportTicket](imgs/ImportTicket.png)
+ ![ImportTicket2](imgs/ImportTicket2.png)
+ ![ImportTicket3](imgs/ImportTicket3.png)
+ ![ImportTicket4](imgs/ImportTicket4.png)
 Caga de datos desde documentos haciendo chunking en los documentos cargados en la base de datos:
- ![ImportDoc](imagenes/ImportDoc.png)
- ![ImportDoc2](imagenes/ImportDoc2.png)
+ ![ImportDoc](imgs/ImportDoc.png)
+ ![ImportDoc2](imgs/ImportDoc2.png)
 Pregunta dentro del Asistente de Soporte TI – RAG:
-   ![Ask](imagenes/Ask.png)
-   ![Ask2](imagenes/Ask2.png)
-   ![Ask3](imagenes/Ask3.png)
-   ![Ask4](imagenes/Ask4.png)
-   ![Ask5](imagenes/Ask5.png)
-   ![Ask6](imagenes/Ask6.png)
+   ![Ask](imgs/Ask.png)
+   ![Ask2](imgs/Ask2.png)
+   ![Ask3](imgs/Ask3.png)
+   ![Ask4](imgs/Ask4.png)
+   ![Ask5](imgs/Ask5.png)
+   ![Ask6](imgs/Ask6.png)
+   ![Ask7](imgs/Ask7.png)
+   ![Ask8](imgs/Ask8.png)
  
  
    
@@ -137,9 +139,9 @@ Cada pregunta incluye:
 •	Fuente esperada
 •	Palabra clave esperada
 Imágenes del GoldenSet:
- ![GoldenSet](imagenes/GoldenSet.png)
- ![GoldenSet2](imagenes/GoldenSet2.png)
- ![GoldenSet3](imagenes/GoldenSet3.png)
+ ![GoldenSet](imgs/GoldenSet.png)
+ ![GoldenSet2](imgs/GoldenSet2.png)
+ ![GoldenSet3](imgs/GoldenSet3.png)
 9.  Métricas utilizadas
 Se implementaron:
  Precision@K
