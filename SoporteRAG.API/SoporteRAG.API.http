@@ -1,0 +1,6 @@
+@SoporteRAG.API_HostAddress = http://localhost:5162
+
+GET {{SoporteRAG.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
