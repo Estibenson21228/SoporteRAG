@@ -45,7 +45,7 @@ El sistema fue desarrollado utilizando:
 ## Arquitectura
 
 <p align="center">
-  <img src="docs/imgs/Arquitectura.png" width="600"/>
+  <img src="imgs/Arquitectura.png" width="600"/>
 </p>
 
  Flujo RAG
