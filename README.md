@@ -7,41 +7,46 @@ El sistema permite a los usuarios realizar consultas sin necesidad de revisar ma
 
 Objetivo
 Desarrollar un sistema RAG funcional capaz de:
-•	Recuperar información relevante mediante búsqueda semántica
-•	Generar respuestas basadas en evidencia real
-•	Evaluar el rendimiento del sistema mediante métricas cuantitativas
-•	Analizar el impacto de diferentes configuraciones (chunking y top-k)
+- Recuperar información relevante mediante búsqueda semántica
+- Generar respuestas basadas en evidencia real
+- Evaluar el rendimiento del sistema mediante métricas cuantitativas
+- Analizar el impacto de diferentes configuraciones (chunking y top-k)
 
 3.  Dataset
 El sistema utiliza dos fuentes de información:
+
 Tickets de soporte
 Se cargaron 1000 tickets históricos que contienen:
-•	Problema
-•	Solución
-•	Categoría
-•	Fecha
+-	Problema
+-	Solución
+-	Categoría
+-	Fecha
 Ejemplo:
+
 TicketId: TCK-001
+
 Problema: No puedo conectarme a la VPN
+
 Solución: Restablecer contraseña y sincronizar autenticación
 
 Documentos técnicos
 Se cargaron 4 documentos en formato:
-•	PDF
-•	DOCX
-•	TXT
+-	PDF
+-	DOCX
+-	TXT
+
 Ejemplos:
-•	ProblemasdeRed.pdf
-•	guiaRed.pdf
+-	ProblemasdeRed.pdf
+-	guiaRed.pdf
 Estos documentos contienen soluciones y guías técnicas de red.
 
 4. Arquitectura del sistema
 El sistema fue desarrollado utilizando:
-•	ASP.NET Core Web API
-•	Clean Architecture
-•	SQL Server
-•	OpenAI Embeddings
-•	OpenAI Chat Model
+-	ASP.NET Core Web API
+-	Clean Architecture
+-	SQL Server
+-	OpenAI Embeddings
+-	OpenAI Chat Model
 
  Flujo RAG
 1.	Usuario realiza una pregunta
@@ -55,13 +60,13 @@ El sistema fue desarrollado utilizando:
 
 5.  Pipeline RAG
  Ingesta
-•	Tickets convertidos a texto
-•	Documentos divididos en chunks
+-	Tickets convertidos a texto
+-	Documentos divididos en chunks
  
  Chunking
 Se evaluaron dos configuraciones:
-•	300 caracteres
-•	600 caracteres
+-	300 caracteres
+-	600 caracteres
  
  Embeddings
 Se utilizó OpenAI para generar vectores de texto, almacenados como JSON en SQL Server.
@@ -70,17 +75,17 @@ Se utilizó OpenAI para generar vectores de texto, almacenados como JSON en SQL 
 Los embeddings se almacenan en la tabla:
 Embeddings
 Incluyendo:
-•	TipoRecurso (Ticket / Documento)
-•	TextoOriginal
-•	Vector
+-	TipoRecurso (Ticket / Documento)
+-	TextoOriginal
+-	Vector
  
 6.  Interfaz
 Se implementó una API REST con endpoints:
-•	/api/rag/preguntar → consulta RAG
-•	/api/documents/cargar → subir documentos
-•	/api/ticket/import/csv → subir csv de ticket
-•	/api/tickets → subir tickets de forma manual
-•	/api/evaluation/experiments → evaluar métricas
+-	/api/rag/preguntar → consulta RAG
+-	/api/documents/cargar → subir documentos
+-	/api/ticket/import/csv → subir csv de ticket
+-	/api/tickets → subir tickets de forma manual
+-	/api/evaluation/experiments → evaluar métricas
  
 
 Se implementó una interfaz básica con HTML, CSS y JS:
@@ -102,8 +107,11 @@ Pregunta dentro del Asistente de Soporte TI – RAG:
 7.  Respuesta estructurada
 Cada respuesta incluye:
 {
+
   "respuesta": "...",
+
   "fuentes": [
+
     {
       "tipoFuente": "Documento",
       "identificador": "guiaRed.pdf",
@@ -112,70 +120,92 @@ Cada respuesta incluye:
     }
   ]
 }
+
 Esto garantiza trazabilidad y evidencia.
 
 8.  Golden Set
 Se creó un conjunto de preguntas de prueba (10 casos), incluyendo:
-•	Problemas de VPN
-•	Problemas de impresión
-•	Problemas de red
-•	Conceptos técnicos
+-	Problemas de VPN
+-	Problemas de impresión
+-	Problemas de red
+-	Conceptos técnicos
 Cada pregunta incluye:
-•	Fuente esperada
-•	Palabra clave esperada
+-	Fuente esperada
+-	Palabra clave esperada
 Imágenes del GoldenSet:
  
  
  
 9.  Métricas utilizadas
 Se implementaron:
+
  Precision@K
+
 Evalúa si la fuente correcta aparece en los resultados.
+
  MRR (Mean Reciprocal Rank)
+
 Evalúa qué tan alto aparece el resultado correcto.
+ 
  Latencia
+
 Tiempo promedio de respuesta.
 
-10.  Experimentos
+11.  Experimentos
 Se evaluaron las siguientes configuraciones:
+
 Chunk	Top-K
+
 300	3
+
 300	7
+
 600	3
+
 600	7
 
  Resultados
+
  Chunk 300
+
 TopK	Precision	MRR	Latencia
+
 3	0.78	0.66	1031 ms
+
 7	0.78	0.66	1004 ms
 
  Chunk 600
+
 TopK	Precision	MRR	Latencia
+
 3	0.66	0.53	649 ms
+
 7	0.78	0.56	584 ms
 
 11.  Análisis
-•	Chunk 300 ofrece mejor precisión y ranking
-•	Chunk 600 reduce latencia pero pierde precisión
-•	Top-K = 7 mejora recall en configuraciones débiles
-•	Top-K = 3 es suficiente cuando el chunk es pequeño
+-	Chunk 300 ofrece mejor precisión y ranking
+-	Chunk 600 reduce latencia pero pierde precisión
+-	Top-K = 7 mejora recall en configuraciones débiles
+-	Top-K = 3 es suficiente cuando el chunk es pequeño
 
 12.  Conclusión
 El sistema RAG desarrollado demuestra que:
-•	Es posible reutilizar conocimiento histórico de tickets
-•	La búsqueda semántica mejora la recuperación de información
-•	El tamaño del chunk impacta directamente en la precisión
-•	Existe un trade-off entre precisión y latencia
+-	Es posible reutilizar conocimiento histórico de tickets
+-	La búsqueda semántica mejora la recuperación de información
+-	El tamaño del chunk impacta directamente en la precisión
+-	Existe un trade-off entre precisión y latencia
 Configuración recomendada:
- Chunk Size = 300
+
+Chunk Size = 300
+
  Top-K = 3 o 7
+
 Esto logra el mejor equilibrio entre rendimiento y calidad.
 
 13.  Mejoras futuras
-•	Búsqueda híbrida (texto + vector)
-•	Reranking
-•	Umbral dinámico de confianza
+-	Búsqueda híbrida (texto + vector)
+-	Reranking
+-	Umbral dinámico de confianza
 •	Memoria de conversación
 •	Evaluación automática con LLM
 
